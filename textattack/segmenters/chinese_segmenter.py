@@ -1,9 +1,15 @@
-from pywordseg import *
+from pywordseg import Wordseg
 
-class ChineseSegmenter():
 
+class ChineseSegmenter:
     def segment_data(self, data):
-        seg = Wordseg(batch_size=64, device="cpu", embedding='elmo', elmo_use_cuda=False, mode="TW")
+        seg = Wordseg(
+            batch_size=64,
+            device="cpu",
+            embedding="elmo",
+            elmo_use_cuda=False,
+            mode="TW",
+        )
 
         segmented = seg.cut([data["text"]])
 
