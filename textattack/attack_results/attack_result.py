@@ -100,18 +100,18 @@ class AttackResult(ABC):
         # iterate through and count equal/unequal words
         words_1_idxs = []
         t2_equal_idxs = set()
-        original_index_map = t2.attack_attrs["original_index_map"]
-        for t1_idx, t2_idx in enumerate(original_index_map):
-            if t2_idx == -1:
-                # add words in t1 that are not in t2
-                words_1_idxs.append(t1_idx)
-            else:
-                w1 = t1.words[t1_idx]
-                w2 = t2.words[t2_idx]
-                if w1 == w2:
-                    t2_equal_idxs.add(t2_idx)
-                else:
-                    words_1_idxs.append(t1_idx)
+        # original_index_map = t2.attack_attrs["original_index_map"]
+        # for t1_idx, t2_idx in enumerate(original_index_map):
+        #     if t2_idx == -1:
+        #         # add words in t1 that are not in t2
+        #         words_1_idxs.append(t1_idx)
+        #     else:
+        #         w1 = t1.words[t1_idx]
+        #         w2 = t2.words[t2_idx]
+        #         if w1 == w2:
+        #             t2_equal_idxs.add(t2_idx)
+        #         else:
+        #             words_1_idxs.append(t1_idx)
 
         # words to color in t2 are all the words that didn't have an equal,
         # mapped word in t1
