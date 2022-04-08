@@ -472,7 +472,6 @@ class AttackedText:
         perturbed_input = OrderedDict(
             zip(self._text_input.keys(), perturbed_input_texts)
         )
-        print("PERTURBED: ", perturbed_text)
         return AttackedText(perturbed_input, attack_attrs=new_attack_attrs)
 
     def words_diff_ratio(self, x):

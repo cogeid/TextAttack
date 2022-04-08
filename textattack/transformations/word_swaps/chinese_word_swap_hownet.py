@@ -20,7 +20,6 @@ class ChineseWordSwapHowNet(WordSwap):
             for key, value in results.items():
               for w in value:
                 synonyms.append(w)
-            print("SYNONYMS: ", synonyms)
             return synonyms
         else:
             return []
