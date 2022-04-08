@@ -8,7 +8,7 @@ class ChineseWordSwapHowNet(WordSwap):
     WordNet."""
 
     def __init__(self):
-        self.hownet_dict = OpenHowNet.HowNetDict(initsim=True)
+        self.hownet_dict = OpenHowNet.HowNetDict(init_sim=True)
         self.topk = 10
 
     def _get_replacement_words(self, word):
