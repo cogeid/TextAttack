@@ -16,8 +16,10 @@ class ChineseWordSwapHowNet(WordSwap):
         replaced by a homoglyph."""
         results = self.hownet_dict.get_nearest_words(word, language = "zh", K = self.topk)
         synonyms = []
-        for key, synonyms in results.items():
-          for w in synonyms:
-            synonyms.append(w)
+        if results:
+            for key, synonyms in results.items():
+              for w in synonyms:
+                synonyms.append(w)
+            return synonyms
         else:
             return []
