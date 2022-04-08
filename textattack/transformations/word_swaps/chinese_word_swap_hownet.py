@@ -17,8 +17,8 @@ class ChineseWordSwapHowNet(WordSwap):
         results = self.hownet_dict.get_nearest_words(word, language = "zh", K = self.topk)
         synonyms = []
         if results:
-            for key, synonyms in results.items():
-              for w in synonyms:
+            for key, value in results.items():
+              for w in value:
                 synonyms.append(w)
             print("SYNONYMS: ", synonyms)
             return synonyms
